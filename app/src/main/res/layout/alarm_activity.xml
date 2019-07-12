@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_item"
+    android:orientation="vertical">
+
+
+    <!--<com.example.mramirhosein.alarm.customanalogclockview.CustomAnalogClock-->
+    <!--android:id="@+id/analog_clock"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="200dp" />-->
+
+    <!--//        CustomAnalogClock customAnalogClock = (CustomAnalogClock) findViewById(R.id.analog_clock);-->
+    <!--//        customAnalogClock.setAutoUpdate(true);-->
+
+
+    <ListView
+        android:id="@+id/list_alarms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dClock"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5.0sp"
+        android:longClickable="true"
+        android:scrollbars="none"></ListView>
+
+    <!--<ExpandableListView-->
+    <!--android:id="@+id/list_alarms"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@+id/dClock"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:divider="@android:color/transparent"-->
+    <!--android:dividerHeight="5.0sp"-->
+    <!--android:longClickable="true"-->
+    <!--android:scrollbars="none" />-->
+
+    <Button
+        android:id="@+id/bt_add"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/round_button_add"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="onClickNew"
+        android:text="+"
+        android:textColor="#fff"
+        android:textSize="25dp" />
+
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/no_alarms" />
+
+
+    <DigitalClock
+        android:id="@+id/dClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="40dp" />
+
+
+</RelativeLayout>

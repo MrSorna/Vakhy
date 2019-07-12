@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_new1"
+        android:icon="@drawable/glyphicons_432_plus"
+        android:orderInCategory="100"
+        android:title="@string/menu_item_new"></item>
+    <item
+        android:id="@+id/menu_item_save1"
+        android:icon="@drawable/glyphicons_443_floppy_disk"
+        android:orderInCategory="100"
+        android:title="@string/menu_item_save"></item>
+    <item
+        android:id="@+id/menu_item_delete1"
+        android:icon="@drawable/glyphicons_016_bin"
+        android:orderInCategory="100"
+        android:title="@string/menu_item_delete"></item>
+    <item
+        android:id="@+id/menu_item_rate1"
+        android:icon="@drawable/glyphicons_049_star"
+        android:orderInCategory="100"
+        android:title="@string/menu_item_rate"></item>
+    <item
+        android:id="@+id/menu_item_website1"
+        android:icon="@drawable/glyphicons_340_globe"
+        android:orderInCategory="100"
+        android:title="@string/menu_item_website"></item>
+    <item
+        android:id="@+id/menu_item_report1"
+        android:icon="@drawable/glyphicons_340_globe"
+        android:orderInCategory="100"
+        android:title="@string/menu_item_report"></item>
+
+</menu>

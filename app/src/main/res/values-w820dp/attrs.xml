@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomAnalogClock">
+        <attr name="face" format="reference" />
+        <attr name="minute_hand" format="reference" />
+        <attr name="hour_hand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_headerLayout" format="reference"/>
+        <attr name="el_contentLayout" format="reference" />
+        <attr name="el_duration" format="integer" />
+    </declare-styleable>
+
+</resources>

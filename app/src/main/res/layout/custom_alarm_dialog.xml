@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView_alarm_dialog_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/delete_background"
+                    android:onClick="onClick"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textSize="70dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layoutDirection="rtl"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/checkBox_alarm_dialog_repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/round_checkbox"
+                    android:layout_marginRight="10dp"
+                    android:onClick="Repeat"
+                    android:text=" تکرار "
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_alarm_dialog_day"
+                    android:layout_width="match_parent"
+                    android:layoutDirection="rtl"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkBox_alarm_dialog_repeat"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBox_alarm_dialog_sat"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_checkbox"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_m"
+                        android:onClick="days"
+                        android:padding="10dp"
+                        android:text="ش" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_alarm_dialog_sun"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_checkbox"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:textSize="@dimen/text_size_m"
+                        android:onClick="days"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="ی" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_alarm_dialog_mon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_checkbox"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:textSize="@dimen/text_size_m"
+                        android:onClick="days"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="د" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_alarm_dialog_tue"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_checkbox"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:textSize="@dimen/text_size_m"
+                        android:onClick="days"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="س" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_alarm_dialog_wed"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_checkbox"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:textSize="@dimen/text_size_m"
+                        android:onClick="days"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="چ" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_alarm_dialog_thu"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_checkbox"
+                        android:button="@null"
+                        android:focusable="false"
+                        android:onClick="days"
+                        android:textSize="@dimen/text_size_m"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="پ" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_alarm_dialog_fri"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/round_checkbox"
+                        android:button="@null"
+                        android:textSize="@dimen/text_size_m"
+                        android:focusable="false"
+                        android:onClick="days"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="ج" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textView_alarm_dialog_ringTone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tv_2_bt"
+                android:onClick="onClick"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="RingTone"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/editText_alarm_dialog_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tv_2_bt"
+                android:hint="Label"
+                android:maxLength="70"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textSize="15dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tv_2_bt"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Method : "
+                    android:textSize="15dp" />
+
+
+                <CheckBox
+                    android:id="@+id/checkBox_alarm_dialog_barcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:button="@drawable/round_checkbox"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Barcode"
+                    android:textSize="15dp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_alarm_dialog_math"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:button="@drawable/round_checkbox"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Math"
+                    android:textSize="15dp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_alarm_dialog_phonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:button="@drawable/round_checkbox"
+                    android:onClick="onClick"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="PhoneNumber"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/checkBox_alarm_dialog_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/round_checkbox"
+                    android:onClick="onClick"
+                    android:text="Vibrate"
+                    android:textSize="20dp" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_alarm_dialog_flashlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@drawable/round_checkbox"
+                    android:text="Flashlight"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!--<Button-->
+    <!--android:id="@+id/button_alarm_dialog_close"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_below="@+id/scrollView"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@drawable/tv_2_bt"-->
+    <!--android:onClick="onClick"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:paddingTop="10dp"-->
+    <!--android:text="Close" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_alarm_dialog_save"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_below="@+id/scrollView"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@drawable/tv_2_bt"-->
+    <!--android:onClick="onClick"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:paddingRight="20dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+
+    <!--android:paddingTop="10dp"-->
+    <!--android:text="Save" />-->
+</RelativeLayout>
